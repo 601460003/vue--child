@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id="ul1">
+  <li class="action"><a href="#">shishi</a></li>
+  <li><a href="#">shishi</a></li>
+  <li><a href="#">shishi</a></li>
+  <li><a href="#">shishi</a></li>
+</ul>
+<script>
+ window.onload = function () {
+   var aul = document.getElementById('ul1');
+   var ali = aul.getElementsByTagName('li');
+
+   for(var i =0;i<ali.length;i++){
+      ali[i].index = i;
+      ali[i].onclick = function () {
+        for(var i =0;i<ali.length;i++){
+          ali[i].className = ''
+        }
+        this.className='action';
+      }
+
+   }
+
+ }
+</script>
+<style>
+  a{
+    padding: 10px;
+  }
+  .action{
+    background: red;
+    color: white;
+  }
+</style>
+</body>
+</html>
